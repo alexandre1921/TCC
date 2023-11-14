@@ -4,9 +4,10 @@ import { WithAuthProps, withAuth } from '../HOCs/withAuth';
 import { GameScene } from '../components/GameScene';
 import { ContentToShowType, useGameHistory } from '../hooks/useGameHistory';
 import { Elderly } from '../components/Elderly';
+import { ElderlyScene } from '../components/ElderlyScene';
 
 export function GameBase({ user }: WithAuthProps) {
-    const { actions, dialog, contentType, karma } = useGameHistory();
+    const { actions, dialog, contentType, karma } = useGameHistory(user);
 
     if (!user) return <Navigate to="/" />;
 
@@ -26,7 +27,7 @@ export function GameBase({ user }: WithAuthProps) {
         return (
             <div className="flex flex-row items-center w-full h-full place-content-center">
                 <div className="absolute w-[1050px] h-[834px]">
-                    <Elderly karma={karma} />
+                    <ElderlyScene karma={karma} />
                     <div className="absolute bottom-0 w-[1050px]">
                         <ActionMessage actions={actions}>{dialog}</ActionMessage>
                     </div>

@@ -17,7 +17,7 @@ const actionMessageContainer = tv({
 
 export type ButtonActions = {
     id: string;
-    children: string;
+    children: string | JSX.Element;
     onClick?: () => void;
 };
 

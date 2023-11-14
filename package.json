@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@pixi/react": "7.1.1",
+    "@react-three/fiber": "^8.15.11",
     "@tailwindcss/container-queries": "0.1.1",
+    "@types/three": "^0.158.2",
     "firebase": "10.5.2",
     "flowbite": "2.0.0",
     "flowbite-react": "0.6.4",
@@ -21,6 +23,7 @@
     "react-firebase-hooks": "5.1.1",
     "react-router-dom": "6.17.0",
     "tailwind-variants": "^0.1.18",
+    "three": "^0.158.0",
     "zustand": "^4.4.6"
   },
   "devDependencies": {
